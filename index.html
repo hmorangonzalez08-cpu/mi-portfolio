@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héctor Morán - Portfolio Web</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importar fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Héctor Morán Gonzalez</div>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section id="sobre-mi" class="hero container">
+            <h1>Hola, soy <span>Héctor Morán Gonzalez</span></h1>
+            <p class="subtitle">Técnico SMR & Desarrollador Web (DAW) en formación</p>
+            <p>Especializándome en Diseño de Interfaces, Frontend y Backend. Fusionando el mundo del hardware y los sistemas con el desarrollo de software.</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+                <!-- Aquí puedes enlazar tu PDF -->
+                <a href="ruta-a-tu-cv.pdf" class="btn btn-secondary" target="_blank">Descargar CV</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN HABILIDADES -->
+        <section id="habilidades" class="container">
+            <h2>Mi Stack Tecnológico</h2>
+            <div class="skills-grid">
+                <!-- Habilidades Desarrollo (DAW) -->
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Java & Python</span>
+                <span class="skill-tag">Figma / UI-UX</span>
+                <span class="skill-tag">Bases de Datos (SQL)</span>
+                
+                <!-- Habilidades Sistemas y Redes (SMR) -->
+                <span class="skill-tag">Windows Server & Linux (Debian/Ubuntu)</span>
+                <span class="skill-tag">Redes Cisco (IOS, LAN/WLAN)</span>
+                <span class="skill-tag">Servicios de Red (DNS, DHCP, FTP)</span>
+                <span class="skill-tag">Montaje y Mantenimiento de Hardware</span>
+                <span class="skill-tag">Soporte Técnico (HelpDesk)</span>
+                <span class="skill-tag">Cloud & Office 365</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PROYECTOS -->
+        <section id="proyectos" class="container bg-light">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
+                
+                <!-- Tarjeta de Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <!-- Pon aquí la ruta de una captura de pantalla de tu práctica -->
+                        <img src="https://via.placeholder.com/400x200" alt="Vista previa del proyecto 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Maquetación Web Responsive</h3>
+                        <p>Diseño y maquetación de una tienda online utilizando HTML5 semántico, CSS Grid y Flexbox. Totalmente adaptada a móviles (Mobile First).</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Grid</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link">Ver Código</a>
+                            <a href="#" class="link">Ver Web</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x200" alt="Vista previa del proyecto 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Prototipo de Interfaz en Figma</h3>
+                        <p>Diseño UI/UX para una aplicación de gestión de tareas. Incluye wireframes, sistema de diseño, guía de estilos y prototipo navegable.</p>
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link">Ver Prototipo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x200" alt="Vista previa del proyecto 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestión de Base de Datos / Backend</h3>
+                        <p>Aplicación en Java para la gestión de inventario, conectada a una base de datos relacional para consultas y modificaciones en tiempo real.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="container">
+            <h2>¿Te interesa?</h2>
+            <p>Si quieres a alguien trabajador que empiece a trabajar en tu equipo, hablemos.</p>
+            <div class="contact-links">
+                <a href="mailto:hmorangonzalez08@gmail.com" class="btn btn-primary">Envíame un email</a>
+                <a href="https://www.linkedin.com/in/hector-moran-gonzález-306379397" target="_blank" class="btn btn-secondary">Conectar en LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Héctor Morán González - Alumno DAW</p>
+    </footer>
+
+</body>
+</html>
