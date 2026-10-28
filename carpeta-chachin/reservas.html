@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chachin Motor</title>
+            <link rel="stylesheet" href="reservas.css">
+
+            <link rel="icon" type="image/png" href="favicon.png">
+
+            <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <!--COMIENZO DEL HEADER-->
+        <header class="navegador">
+            <div>
+                <img src="logo.png" alt="Logo Chachin Motor" class="logo">
+                <h3 style="font-family:'Orbitron', sans-serif;">CHACHIN MOTOR</h3>
+            
+                <nav>
+                    <b>
+                        <ul style="font-family:'Open Sans', sans-serif;">
+                            <li><a href="index.html" class="active">INICIO</a></li>
+                            
+                            <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+                            
+                            <li class="dropdown">
+                                <a href="servicios.html">SERVICIOS ▾</a>
+                                <ul class="dropdown-content">
+                                    <li><a href="mecanicogeneral.html">Mecánica General</a></li>
+                                    <li><a href="chapaypintura.html">Chapa y Pintura</a></li>
+                                    <li><a href="lunas.html">Cambio de Lunas</a></li>
+                                    <li><a href="preitv.html">Revisión Pre-ITV</a></li>
+                                    <li><a href="neumaticos.html">Cambio de Neumáticos</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="contacto.html">CONTACTO</a></li>
+                        </ul>
+                    </b>
+                </nav>
+            </div>
+        </header>
+        <!--FINAL DEL HEADER-->
+
+        <!--COMIENZO DEL FORMULARIO-->
+        <main class="reservas-seccion">
+            <div class="contenedor-formulario" style="font-family:'Orbitron', sans-serif;">
+                <h1>Reserva tu Cita</h1>
+                <p>Completa los detalles para la revisión de tu vehículo en Chachín Motor.</p>
+                
+                <form action="confirmacion.html" method="get" class="formulario-estilo">
+                    
+                    <div class="grupo">
+                        <label>Nombre Completo:</label>
+                        <input type="text" name="nombre" 
+                            placeholder="Ej: Juan Pérez García" 
+                            required 
+                            pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,50}" 
+                            title="El nombre solo debe contener letras y espacios (mínimo 3)">
+                    </div>
+
+                    <div class="grupo">
+                        <label>Matrícula del Vehículo:</label>
+                        <input type="text" name="matricula" 
+                            placeholder="1234ABC" 
+                            required 
+                            pattern="[0-9]{4}[A-Z]{3}" 
+                            title="Formato requerido: 1234ABC (4 números y 3 letras mayúsculas)">
+                    </div>
+
+                    <div class="grupo">
+                        <label>Tipo de Servicio:</label>
+                        <select name="servicio" required>
+                            <option value="" disabled selected>Selecciona un servicio...</option>
+                            <option value="mecanica">Mecánica General</option>
+                            <option value="chapa">Chapa y Pintura</option>
+                            <option value="lunas">Cambio de Lunas</option>
+                            <option value="itv">Revisión Pre-ITV</option>
+                            <option value="neumaticos">Cambio de Neumáticos</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-combustible">
+                        <label class="titulo-grupo">TIPO DE COMBUSTIBLE:</label>
+                        <div class="opcion-item">
+                            <input type="radio" id="gasolina" name="motor" value="gasolina" checked required>
+                            <label for="gasolina">Gasolina</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="diesel" name="motor" value="diesel">
+                            <label for="diesel">Diésel</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="electrico" name="motor" value="electrico">
+                            <label for="electrico">Eléctrico/Híbrido</label>
+                        </div>
+                    </div>
+
+                    <div class="grupo-extras">
+                        <label class="titulo-grupo">EXTRAS NECESARIOS:</label>
+                        <div class="opcion-item">
+                            <input type="checkbox" id="lavado" name="extra_lavado">
+                            <label for="lavado">Lavado Exterior</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="checkbox" id="aceite" name="extra_aceite">
+                            <label for="aceite">Cambio de Aceite</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="checkbox" id="niveles" name="extra_niveles">
+                            <label for="niveles">Revisión de Niveles</label>
+                        </div>
+                    </div>
+
+                    <div class="grupo">
+                        <label>Comentarios adicionales:</label>
+                        <textarea name="mensaje" rows="3" 
+                            placeholder="¿Algún comentario más? (Máximo 200 caracteres)" 
+                            maxlength="200"></textarea>
+                    </div>
+
+                    <div class="botones-form">
+                        <button type="submit" class="btn-enviar">Confirmar Reserva</button>
+                        <button type="reset" class="btn-borrar">Limpiar</button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+        <!--FINAL DEL FORMULARIO-->
+        <!--COMIENZO DEL FOOTER-->
+        <footer>
+            <div class="fondo" style="font-family:'Open Sans', sans-serif;">
+                <div class="info"> 
+                    <a href="contacto.html">
+                        <p>Polígono Industrial El Olivar, <br> Nave 42, 28001, Madrid</p>
+                    </a>
+                </div>
+
+                <div class="info2">
+                    <a href="#"><p>+34 912 345 678</p></a>
+                    <a href="#"><p style="font-size: 0.8rem; opacity: 0.9;">info@chachinmotor.com</p></a>
+                </div>
+
+                <div class="info3">
+                    <div class="social-icons">
+                        <a href="#" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--FINAL DEL FOOTER-->
+    </body>
+</html>

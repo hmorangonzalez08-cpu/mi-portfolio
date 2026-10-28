@@ -1,0 +1,468 @@
+/*AQUI EMPIEZA EL APARTADO PARA LA PAGINA INDEX*/
+
+/* 1. APARTADO BARRA DE NAVEGACIÓN*/
+.navegador>div
+{
+    background-color: #355872; 
+    color: rgb(255, 255, 255);  
+    display: flex;
+    margin: 0px;
+    padding: 0 30px;
+    height:80px;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px #575757c9; /*SOMBRA DE LA CAJA */
+}
+
+/*LOGO CON TRANSICIÓN */
+.logo {
+    display: flex;        
+    width: 160px;   
+    height: 140px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* ESTA ES LA VELOCIDAD EN LA QUE HACE EL GIRO */
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.2) rotate(4deg); /* LA PARTE DE SCALE ES PARA AGRANDAR EL LOGO Y LA DE ROTATE PARA QUE GIRE UN POCO */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); /* PARTE PARA QUE LE DE BRILLO A LA PARTE DE ATRAS DEL LOGO */
+}
+
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+nav
+{
+    margin-left: auto;
+}
+
+nav ul 
+{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a 
+{
+    color: rgb(255, 255, 255); /*COLOR DE LAS LETRAS DERECHA*/
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    align-items: center;
+}
+
+nav a:hover
+{
+    color: #8a8888; /*COLOR DEL CURSOR*/
+}
+
+/* 2. APARTADO ANIMACIÓN CARRUSEL DE FOTOS KEYFRAMES*/
+.carrusel {
+    max-width: 1500px;
+    width: 95%;      
+    height: 600px; 
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 30px auto 0px auto; 
+    padding: 0; 
+}
+
+.slider {
+    display: flex;
+    width: 500%; 
+    height: 100%;
+    animation: slideAnimation 25s infinite; 
+}
+
+.foto {
+    width: 20%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* 3. Animación ajustada para 5 imágenes */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(0); }
+    20% { transform: translateX(-20%); }
+    35% { transform: translateX(-20%); }
+    40% { transform: translateX(-40%); }
+    55% { transform: translateX(-40%); }
+    60% { transform: translateX(-60%); }
+    75% { transform: translateX(-60%); }
+    80% { transform: translateX(-80%); }
+    95% { transform: translateX(-80%); }
+    100% { transform: translateX(0); }
+}
+
+/* 4. PARTE PIE DE PAGINA */
+footer {
+    width: 100%;
+    margin-top: 0; 
+}
+
+.fondo {
+    background-color: #355872;
+    color: white;
+    margin: 0;
+    padding: 20px 0; 
+    
+  
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 60px; 
+}
+
+/* Estilo común para los 3 bloques del footer */
+.info, .info2, .info3 {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.9rem; 
+    transition: all 0.3s ease;
+}
+
+/* BLOQUES LATERALES (Dirección y Redes) - Ahora más anchos */
+.info, .info3 {
+    background-color: rgb(183, 183, 183);
+    width: 280px;        /* Aumentado para que quepa la dirección */
+    min-height: 70px;    /* Altura flexible */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+/* BLOQUE CENTRAL (Teléfono y Email) */
+.info2 {
+    background-color: transparent; 
+    color: white; 
+    width: auto; 
+    height: auto; 
+    padding: 0 10px;
+    flex-direction: column; /* Pone el email debajo del teléfono */
+    gap: 5px;
+}
+
+.info2 p {
+    margin: 0;
+    line-height: 1.2; 
+}
+
+/* Estilo para los enlaces de texto (Dirección y Teléfono) */
+.info a, .info2 a {
+    text-decoration: none; 
+    color: inherit; /* Mantiene el color del bloque (negro o blanco) */
+    display: block;
+}
+
+/* APARTADO DE REDES SOCIALES (Iconos) */
+.social-icons {
+    display: flex;
+    gap: 20px; /* Separación entre Instagram y TikTok */
+}
+
+.social-icons img {
+    width: 35px; /* Tamaño de los logos */
+    height: 35px;
+    filter: brightness(0) saturate(100%); /* Esto vuelve los iconos negros para que peguen con el fondo gris */
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Efecto zoom al pasar el ratón */
+}
+
+/* CAMBIO DE COLOR AL PASAR EL RATÓN POR CADA SERVICIO */
+.dropdown-content li a:hover {
+    background-color: #4a718f; 
+    color: #ffffff;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+/*5. APARTADO MENU DESPEGABLE*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* CAJA DEL MENÚ */
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #355872; 
+    min-width: 150px; 
+    box-shadow: 0px 8px 16px 0px rgba(205, 205, 205, 0.3); 
+    z-index: 1000; 
+    top: 100%; 
+    left: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 0 0 8px 8px; 
+}
+
+/* ESTILO DE LOS LINKS DENTRO DEL DESPLEGABLE */
+.dropdown-content li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.85rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+/* CAMBIO DE COLOR AL PASAR EL RATÓN POR CADA SERVICIO */
+.dropdown-content li a:hover {
+    background-color: #4a718f; 
+    color: #ffffff;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+/*6. APARTADO DE MEDIAQUERIE*/
+/*VERSIÓN MÓVIL*/
+@media (max-width: 768px) {
+    
+    .navegador > div {
+        flex-direction: column; 
+        height: auto;          
+        padding: 15px 0;        
+    }
+
+    nav {
+        width: 100%;            
+    }
+
+    nav ul {
+        flex-direction: row;    
+        flex-wrap: wrap;        
+        justify-content: center;
+        gap: 10px 20px;         
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.85rem;     
+        
+        padding: 5px 2px;
+    }
+
+    
+    .dropdown-content {
+        position: absolute; 
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+}
+/*AQUI FINALIZA EL APARTADO PARA LA PAGINA INDEX*/
+
+/*AQUI EMPIEZA EL APARTADO DE RESERVAS */
+.reservas-seccion {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('reservas.jpg');
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.contenedor-formulario {
+    background: rgba(255, 255, 255, 0.05); /* Efecto cristal oscuro */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 50px;    
+    max-width: 550px;
+    width: 100%;
+    color: white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.contenedor-formulario h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contenedor-formulario p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.formulario-estilo .grupo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-estilo label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.formulario-estilo input[type="text"],
+.formulario-estilo select,
+.formulario-estilo textarea {
+    width: 100%; 
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-sizing: border-box; 
+}
+
+.grupo-inline {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+}
+
+.titulo-grupo {
+    display: block;
+    color: #4a718f; 
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.opcion-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.opcion-item input[type="radio"],
+.opcion-item input[type="checkbox"] {
+    width: 18px !important; 
+    height: 18px !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.opcion-item label {
+    margin: 0 !important;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.botones-form {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+/*BOTON PARA ENVIAR FORMULARIO*/ 
+.btn-enviar {
+    flex: 2;
+    padding: 15px;
+    background-color: #355872;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #4a718f;
+    transform: scale(1.02);
+}
+
+/*BOTON PARA BORRAR FORMULARIO*/ 
+.btn-borrar {
+    flex: 1;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #355872;
+    border-radius: 8px;     
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-borrar:hover {
+    background: #355872;
+    color: white;
+}
+
+.btn-enviar {
+    background-color: #355872; /* El color azul de tu diseño */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #4a718f;
+}
+/*AQUI FINALIZA EL APARTADO DE RESERVAS */
+
+/*APARTADO PARA QUE SE VEA BIEN DESDE EL MOVIL */ 
+
+@media (max-width: 768px) {
+    /* Hacemos que el contenedor del footer se ponga en vertical */
+    .fondo {
+        flex-direction: column; 
+        gap: 20px; /* Espacio entre los bloques */
+        padding: 20px 10px;
+    }
+
+    /* Ajustamos el tamaño de los cuadros grises para que no se corten */
+    .info, .info3 {
+        width: 90%;      /* Casi todo el ancho de la pantalla */
+        height: auto;    /* Que crezca según el texto */
+        min-height: 60px;
+        padding: 15px;
+    }
+
+    /* Reducimos un poco el texto si es muy largo */
+    .info a {
+        font-size: 0.8rem;
+    }
+
+    /* Aseguramos que el bloque del centro (teléfono) esté bien centrado */
+    .info2 {
+        order: -1; /* OPCIONAL: Ponemos el teléfono arriba del todo si quieres */
+        margin-bottom: 10px;
+    }
+}
+/*FIN DEL APARTADO*/
