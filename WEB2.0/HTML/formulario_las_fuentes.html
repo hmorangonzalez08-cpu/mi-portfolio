@@ -1,0 +1,175 @@
+<!-- ================================================= Héctor Morán ==============================================   -->
+<!-- FICHERO:			formulario_las_fuentes.html                                                            -->
+<!-- WEB:				2.0                                                                                              -->
+<!-- DESCRIPCIÓN:   	PAGÍNA WEB DE LAS FUENTES                          -->
+<!-- FECHA_UPDATE:		12/02/2025                                                                             -->
+<!-- DESARROLLADOR:		hector.mg@neopulseda.com	                                                                 -->
+<!-- ==============================================================================================================  -->
+<!-- DTD O Document Type Definition (doctype) --> 
+<!DOCTYPE HTML>
+
+<HTML>
+  <HEAD>
+	<Body bgcolor="#bde5f4">
+	 
+	<TITLE> Reserva de hoteles</TITLE>
+	<!-- ============================================== META TAGS =========================================== -->
+		<META NAME="copyright" content="LasFuentes"> 
+		<META NAME="author" content="Héctor Morán">
+		<META NAME="description" content="PAGÍNA PRINCIPAL DE LAS FUENTES">
+		<META NAME="keywords" content="LAS FUENTES">
+		<META Charset="utf-8">
+	<!-- ==================================================================================================== -->
+	
+	<!-- LOGO DE LAS FUENTES Y VUELTA A LA PRINCIPAL -->
+	<A HREF="../index.html">
+		<IMG SRC="../LOGOS/logo.png" alt="Posición del logo Las Fuentes" width="300" height="300">
+	</A>
+	
+	<!-- NOMBRE DE LA EMPRESA CON LINEA DIVISORA -->
+	<h1 align="middle"> <font face="Verdana" color="black"> 
+	Las Fuentes
+	</h1> <font>
+	<hr size="2" color="grey">
+	
+	<!-- FORMULARIO DE RESERVA -->
+	<!-- TITULO DE RESERVA DE HOTELES -->
+    <center>
+	<font face="Verdana" color="black">
+	<h1>RESERVA DE HOTELES</h1>
+    </font>
+	<!-- Comienzo de la tabla reservas -->
+	<table border="0" cellspacing="15" cellpadding="150">
+    <tr>
+	<td>
+	<fieldset>
+	<legend><font face="Verdana" color="black"> FORMULARIO DE RESERVA </font> </legend>
+		<!-- Comienzo de la tabla de los pasos -->
+		<table>
+		<!-- Paso 1. Identificación -->
+		<tr>
+		<td>
+        <h3><font face="Verdana"> >Paso 1. Identificación </font></h3>
+		</td>
+		</tr>
+		<!-- Datos del cliente -->
+		<tr>
+			<td>	
+		<fieldset>
+            <legend>Datos del Cliente</legend>
+			<br>
+            Correo electrónico
+			<br>
+			<input type="text" name="email">
+			<br>
+            Contraseña
+			<br>
+			<input type="password" name="password" minlength="6"> 
+			<br>
+			(Longitud mínima 6 caracteres)
+			<br>
+        </fieldset>
+			</td>
+		<!-- Datos bancarios -->	
+			<td>	
+		<fieldset> 
+            <legend>Datos Bancarios</legend>
+			<br>
+            Nombre de la entidad
+			<br>
+			<input type="text" name="banco">
+			<br>
+            Número de cuenta 
+			<br>
+			<input type="text" name="cuenta">
+			<br>
+        </fieldset>
+			</td>
+		</tr>
+		<tr>
+		<td>
+		<h3><font face="Verdana"> >Paso 2. Datos de la Reserva </font></h3>
+		</td>
+		</tr>
+		<!-- Datos de la Habitaciónn -->
+		<tr>
+		<td>
+		<fieldset>
+            <legend>Datos de la habitación</legend>
+			<br>
+            <select name="habitacion" multiple="4">
+			    <option value="Habitaciones">Habitaciones</option>
+                <option value="Habitaciones">H001 Habitación Individual</option>
+                <option value="Habitaciones">H002 Habitación Doble</option>
+                <option value="Habitaciones">H003 Habitación Deluxe</option>
+				<option value="Extras">Extras</option>
+                <option value="EX001">EX001 Parking</option>
+                <option value="EX002">EX002 Wifi</option>
+            </select>
+		</td>
+		
+		<!-- Informacíon de interés -->
+		<td>
+        </fieldset>
+		  <fieldset>
+            <legend>Información de interés</legend>
+			<br>
+            Otras peticiones
+			<br>
+			<textarea name="peticiones" rows="6" cols="100"> Escriba sus comentarios </textarea>
+			<br>
+            <input type="checkbox" name="publicidad"> 
+			Acepto recibir información publicitaria
+			<br>
+        </fieldset>
+		</td>
+		</tr>
+		<!-- Motivo del viaje -->
+		<tr>
+		<td>	
+        <fieldset>
+            <legend>Motivo del viaje</legend>
+            <input type="radio" name="motivo" value="ocio"> Ocio/Turismo/Vacaciones<br>
+            <input type="radio" name="motivo" value="trabajo"> Estudio/Trabajo<br>
+            <input type="radio" name="motivo" value="familia"> Familia/Amigos<br>
+        </fieldset>
+		</td>
+		<!-- Régimen de alojamiento -->
+		<td>
+		   <fieldset>
+            <legend>Régimen de alojamiento</legend>
+			<br>
+            <select name="alojamiento">
+                <option value="N/A">N/A</option>
+				<option value="A/D">A/D</option>
+				<option value="M/P">M/P</option>
+				<option value="P/C">P/C</option>
+            </select>
+        </fieldset>
+		</td>
+		</tr>
+	
+		<!-- BOTONES DE ENVIAR Y VACIAR EL FORMULARIO -->
+		<tr>
+			<td>
+			</td>
+		<td>
+		<input type="submit" value="Enviar Formulario">
+        <input type="reset" value="Vaciar Formulario">
+		</form>
+		</td>
+		</tr>
+		</table>
+	</tr> 	
+    </fieldset>	  
+	</table>
+  </font>
+  </center>
+	<br>
+	<center>
+	<h3>
+	<TT> <I> &#169; Copyright - Las Fuentes - 2025 </I> </TT>
+	</center>
+	</h3>
+	</BODY>
+</HTML>
